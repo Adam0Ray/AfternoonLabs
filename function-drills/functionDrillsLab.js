@@ -294,21 +294,22 @@
   Use the sample array to test this function.
 */
 
-//CODE HERE
-// let sampleArray = [0,1,2,3,4,7,5,6,8,9]
-// function check(arr){
-//   let comparisonValue = arr[0]
-//   for (let i = 0; i < arr.length-1; i++){
-//   if (arr[i] <= comparisonValue) {
-//     return false
-//   } else {
-//     comparisonValue = arr[i]
-//   }
-// }
-// return true
-// }
+// CODE HERE
+let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+// let sampleArray = [0,1,2,3,4,5,6,7,8,9]
+function check(arr){
+  let comparisonValue = arr[0]
+  for (let i = 1; i < arr.length-1; i++){
+  if (arr[i] <= comparisonValue) {
+    return false
+  } else {
+    comparisonValue = arr[i]
+  }
+}
+return true
+}
 
-// let arrayIsAscending = console.log(check(sampleArray))
+let arrayIsAscending = console.log(check(sampleArray))
 
 ////////////////// PROBLEM 16 ////////////////////
 
