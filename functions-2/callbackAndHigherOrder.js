@@ -6,7 +6,7 @@
 */
 
 // CODE HERE
-
+const multiply = (num1, num2, callback) => callback(num1 * num2)
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -16,6 +16,8 @@
 //   console.log('The answer is ' + answer) //should console.log 12
 // })
 
+//logs The answer is 12
+
 
 
 ////////// PROBLEMS 2 - 6 //////////
@@ -23,7 +25,7 @@
 // The names array will be used in problems 2 - 6.
 
 // Do not edit the code below.
-var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
+// var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 // Do not edit the code above.
 
 
@@ -36,7 +38,8 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE 
-
+var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
+const first = (arr, callback) => callback(arr[0])
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -45,6 +48,8 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 // first(names, firstName => {
 //   console.log('The first name in names is ' + firstName)
 // })
+
+//logs The first name in names is Tyler
 
 
 
@@ -56,7 +61,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE
-
+const last = (arr, callback) => callback(arr[names.length-1])
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -65,7 +70,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 // last(names, lastName => {
 //   console.log('The last name in names is ' + lastName)
 // })
-
+//logs The last name in names is Cahlan
 
 
 ////////// PROBLEM 4 //////////
@@ -78,7 +83,13 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE 
-
+const contains = (arr, name, callback) => {
+  if (arr.includes(name) === true){
+    callback(true)
+  } else {
+    callback(false)
+  }
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -91,6 +102,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 //     console.log('Colt is not in the array')
 //   }
 // })
+//logs Colt is in the array
 
 
 
@@ -103,7 +115,17 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE
-
+const uniq = (arr, callback) =>{
+  for (let i = 0; i < arr.length; i++){         //loop i
+    for (let x = i + 1; x < arr.length; x++){    //loop x starting at index after i
+      if (arr[i] === arr[x]){       //if strictly equal/duplicated
+        arr.splice(x,1)             //splice out at the x index 1 value
+        x--                         //decrement x
+      }
+    }
+  }
+callback(arr)
+}
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
   The callback function should take in one parameter called uniqArr.
@@ -112,7 +134,8 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE
-
+// uniq(names, uniqArr => console.log(`The new names array with all the duplicate items removed is ${uniqArr}.`))
+//logs The new names array with all the duplicate items removed is Tyler,Cahlan,Ryan,Colt,Blaine.
 
 
 ////////// PROBLEM 6 //////////
@@ -123,7 +146,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE 
-
+const each = (arr, callback) => arr.forEach((element, index) => callback(element, index))
 
 /*
   Invoke the each function, passing in the names array and a callback function.
@@ -133,7 +156,15 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE
-
+// each(names, (element,index) => console.log(`The item at index ${index} is ${element}`))
+//logs 
+// The item at index 0 is Tyler
+// The item at index 1 is Cahlan
+// The item at index 2 is Ryan
+// The item at index 3 is Colt
+// The item at index 4 is Tyler
+// The item at index 5 is Blaine
+// The item at index 6 is Cahlan
 
 ////////// PROBLEM 7 //////////
 
@@ -164,9 +195,18 @@ var users = [
   },
 ]
 // Do not edit the code above.
-
+/*
+  Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
+  When the correct user object is found, invoke the callback with the user object as an argument.
+*/
 // CODE HERE 
-
+const getUserById = (arr, id, callback) =>{
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i].id === id ) {
+      return callback(arr[i])
+    }
+  }
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -175,7 +215,7 @@ var users = [
 // getUserById(users, '16t', user => {
 //   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
 // })
-
+//logs The user with the id 16t has the email of ryan@gmail.com the name of Ryan and the address of 192 East 32 North
 ////////// CHALLENGE //////////
 
 /*
@@ -193,7 +233,7 @@ var users = [
 */
 
 // CODE HERE
-
+const addingFactory = x => y => x + y
 /*
   Now that you have addingFactory, you can create other
   functions from it. 
@@ -207,7 +247,7 @@ var users = [
 */
 
 // CODE HERE
-
+const addTen = addingFactory(10)
 /*
   Now the inner function is stored in the addTen variable! 
 
@@ -219,7 +259,8 @@ var users = [
 */
 
 // CODE HERE
-
+console.log(addTen(20))  //logs 30
+console.log(addTen(50))  //logs 60
 /*
   Let's make another function from the addingFactory. 
 
@@ -232,3 +273,7 @@ var users = [
 */
 
 // CODE HERE
+const addThree = addingFactory(3)
+console.log(addThree(3))
+
+//logs 6
