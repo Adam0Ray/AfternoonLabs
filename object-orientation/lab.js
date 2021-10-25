@@ -452,7 +452,7 @@ let myFirstVehicle = new Vehicle('10', 'red', 0)
 //Code Here
 class Motorcycle extends Vehicle {
 constructor(capacity, color, mileage, make, isCool){
-super(capacity, color, mileage)
+super(capacity, color, mileage)      //have to call super for class Motorcycle to be able to use Vehicle constructor info
 this.make = make
 this.isCool = isCool
 }

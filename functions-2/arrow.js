@@ -83,7 +83,7 @@ const compareNums = (num1, num2) => {
     return num1
   } else {
     return num2
-  }
+  } 
 }
 
 //or ternary

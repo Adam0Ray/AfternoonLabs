@@ -1,0 +1,42 @@
+*{
+    background-color:gray;
+}
+img{
+    height: 500px;
+    width: 750px;
+    
+}
+body{
+    margin: 0px;
+}
+
+h1{
+    border: moccasin dotted;
+    width: 750;
+}
+
+
+h1, p {
+    text-align: left;
+    
+}
+
+li{
+color:black;
+}
+
+h1{
+    color:antiquewhite ;
+}
+
+div p{
+    color:moccasin;
+}
+
+button{
+    border:none;
+    background-color:blue;
+    color:black
+    border-radius: 60px
+    
+}
