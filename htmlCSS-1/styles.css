@@ -40,3 +40,13 @@ button{
     border-radius: 60px
     
 }
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
