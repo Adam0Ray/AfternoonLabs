@@ -1,0 +1,64 @@
+
+.top{
+    width: 100vh;
+    height: 20vh;    
+    border: 3px solid black;
+    display: flex;
+    justify:flex-start
+}
+.purplerectangle{
+    width: 15px;
+    height: 45px;
+    background-color: indigo;
+    margin: 5px;
+    margin-top: 30px;
+  
+}
+.greenrectangle{
+    width: 150px;
+    height: 70px;
+    background-color:green;
+    margin: 5px;
+}
+.bluecircle{
+    width: 75px;
+    height: 75px;
+    background-color: skyblue;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.middle{
+    width: 100vh;
+    height: 20vh; 
+    border: dotted black;
+    display: flex;
+    justify:space-between
+    align: center
+}
+
+.yellowrectangle{
+    width: 300px;
+    height: 50px;
+    background-color:rgba(240, 240, 124, 0.863); 
+    margin: auto;   
+    box-shadow:4px 4px 0px 0px gray;
+}
+
+.bottom{
+    width: 50vh;
+    height: 20vh; 
+    border: 1px solid rgb(92, 86, 86);
+    display: flex;
+    margin-left: 25vh;
+    box-shadow:2px 2px 0px 0px gray;
+
+}
+
+p {
+    color: darkblue;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

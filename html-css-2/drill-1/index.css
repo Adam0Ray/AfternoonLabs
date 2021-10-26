@@ -1,0 +1,36 @@
+*{
+width: 100vh;
+height: 100vh;
+margin: auto;
+}
+
+header{
+    background-color: rgb(71, 70, 70);
+    width: 100vh;
+    height: 20vh;
+}
+
+.leftcolumn{
+    background-color: rgb(114, 110, 110);
+    width: 20vh;
+    height: 100vh;
+    float: left;
+}
+
+.rightcolumn{
+    background-color: rgb(114, 110, 110);
+    width: 20vh;
+    height: 100vh;
+    float: right;
+}
+.center{
+    background-color: rgb(255, 255, 255);
+    width: 20vh;
+    height: 80vh;    
+}
+
+.footer{
+    background-color: rgb(71, 70, 70);
+    width:100vh;
+    height:20vh;
+}
