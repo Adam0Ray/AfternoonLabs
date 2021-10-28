@@ -79,13 +79,28 @@ const ohMy = () => {
     // YOUR CODE HERE
     return axios.get('http://localhost:3000/animals')
     .then(response => {
-        console.log('Response', response)   
-        //logs data:Array (3).... lions, tigers, bears, and the data
-    })  
-}
+        let body = document.querySelector("body")
+        
 
+         for (let i = 0; i < response.data.length; i++){
+            
+             const para = document.createElement("p");
+             para.textContent = response.data[i]
+             console.log(para)
+             body.appendChild(para)
+            
+        }
+        // console.log(response.data)
+        
+    })  
+    
+}
 document.getElementById('animals-button').addEventListener('click', ohMy)
 
+
+
+//  prior to intermediate   console.log('Response', response)   
+//logs data:Array (3).... lions, tigers, bears, and the data
 
 // PROBLEM 6 
 /*
@@ -140,17 +155,18 @@ document.getElementById('repeat-button').addEventListener('click', repeatMyParam
 
 // CODE HERE
 const queryAttach = () => {
-axios.get('http://localhost:3000/?testquery=willigetanerror')
+axios.get('http://localhost:3000/query-test/')
 .then(response => {
     console.log('Response', response)
 })
-.catch(error => {
-    console.log('Error', error)
-})
+// .catch(error => {
+//     console.log('Error', error)
+// })
 
 }
 document.getElementById('query-button').addEventListener('click', queryAttach)
-
+//intermediate empty logs Response {data: 'You sent an empty query!', status: 200, statusText: 'OK', headers: {…}, config: {…}, …}
+//intermediate logs ;{data: 'You sent query: name:bear?name:lion with value: !', status: 200, statusText: 'OK', headers: {…}, config: {…}, …}
 
 
 ////////////////
@@ -159,9 +175,12 @@ document.getElementById('query-button').addEventListener('click', queryAttach)
 
 // PROBLEM 9
 /* 
-    Back in the ohMy function on Problem 5, replace the console log in the promise's callback with a for loop that loops over res.data. 
+    Back in the ohMy function on Problem 5, replace the console log in the promise's callback 
+    with a for loop that loops over res.data. 
 
-    On each iteration of the loop, create a new p element. Set its textContent equal the string at the current index (i) and then append the new p element onto the document's body. 
+    On each iteration of the loop, create a new p element. 
+    Set its textContent equal the string at the current index (i) and 
+    then append the new p element onto the document's body. 
 */
 
 // Code in the ohMy function in Problem 5
@@ -185,21 +204,66 @@ document.getElementById('query-button').addEventListener('click', queryAttach)
 
 //PROBLEM 11
 /*
-    You are going to add the ability to POST to the server. You'll need to create a small form and write a function that makes a post request. Then you'll attach that function to the submit event on the form. We'll be creating a list of foods. 
+    You are going to add the ability to POST to the server. 
+    You'll need to create a small form 
+    and write a function that makes a post request. 
+    Then you'll attach that function to the submit event on the form. 
+    We'll be creating a list of foods. 
 
-    In the index.html file inside of the client folder, create a form with one text input field and a button. The input field should have a placeholder that tells the user to enter a food. And the button should indicate that it will add food into a list. 
+    In the index.html file inside of the client folder, 
+    create a form with one text input field and a button. 
+    The input field should have a placeholder that tells the user to enter a food. 
+    And the button should indicate that it will add food into a list. 
 
     In this file (script.js), create a function called createFood. 
     
     Inside the function, select the input you just created in the HTML and save it to a variable called foodInput. 
     
-    Next, create an object called body inside the function. It should have one key-value pair. The key should be newFood (make sure to match the case and spelling exactly) and the value should be the value of the food input. 
+    Next, create an object called body inside the function. 
+    It should have one key-value pair. 
+    The key should be newFood (make sure to match the case and spelling exactly) 
+    and the value should be the value of the food input. 
 
-    Now make an axios post request to /food. Inside the parentheses where you passed the URL in, pass in body as the second argument. 
+    Now make an axios post request to /food. 
+    Inside the parentheses where you passed the URL in, pass in body as the second argument. 
 
-    Use a .then to handle the promise returned from the axios call. Pass a callback function to the .then. Inside that callback, console log the res.data. 
+    Use a .then to handle the promise returned from the axios call. 
+    Pass a callback function to the .then. 
+    Inside that callback, console log the res.data. 
 
-    Based on what we did earlier to display this type of data, write code that will display the response in your HTML document. 
+    Based on what we did earlier to display this type of data, 
+    write code that will display the response in your HTML document. 
 */
 
 // CODE HERE 
+
+const createFood = () =>{
+    let foodInput = document.querySelector("inputFood")
+    let form = document.createElement("ul");
+    let formTitle = document.createElement("span");
+    formTitle.textContent = foodInput.value;
+    form.appendChild(formTitle);
+    formTitle.addEventListener("click", formTitle)
+
+   const body = {
+        newFood : foodInput
+    }
+
+    const postToServer = () => {
+        axios.post('http://localhost:3000/food',body) 
+        .then(response => {
+                console.log('Response Data',response.data)
+        })
+        .catch(error => {
+            console.log('Error', error)
+        })
+        }
+        console.log(document.querySelector("body"))
+
+}
+console.log(document.querySelector("form"));
+// document.getElementById('foodBtn').addEventListener('click', createFood)
+//pass createFood into html line 27 form
+
+
+
