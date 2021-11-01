@@ -167,7 +167,7 @@ axios.get('http://localhost:3000/query-test/')
 document.getElementById('query-button').addEventListener('click', queryAttach)
 //intermediate empty logs Response {data: 'You sent an empty query!', status: 200, statusText: 'OK', headers: {…}, config: {…}, …}
 //intermediate logs ;{data: 'You sent query: name:bear?name:lion with value: !', status: 200, statusText: 'OK', headers: {…}, config: {…}, …}
-
+// to query multiple chain ? with &
 
 ////////////////
 //INTERMEDIATE//
@@ -212,20 +212,25 @@ document.getElementById('query-button').addEventListener('click', queryAttach)
 
     In the index.html file inside of the client folder, 
     create a form with one text input field and a button. 
-    The input field should have a placeholder that tells the user to enter a food. 
+    The input field should have a placeholder 
+    that tells the user to enter a food. 
     And the button should indicate that it will add food into a list. 
 
     In this file (script.js), create a function called createFood. 
     
-    Inside the function, select the input you just created in the HTML and save it to a variable called foodInput. 
+    Inside the function, 
+    select the input you just created in the HTML 
+    and save it to a variable called foodInput. 
     
     Next, create an object called body inside the function. 
     It should have one key-value pair. 
-    The key should be newFood (make sure to match the case and spelling exactly) 
+    The key should be newFood (make sure to match the case 
+        and spelling exactly) 
     and the value should be the value of the food input. 
 
     Now make an axios post request to /food. 
-    Inside the parentheses where you passed the URL in, pass in body as the second argument. 
+    Inside the parentheses where you passed the URL in, 
+    pass in body as the second argument. 
 
     Use a .then to handle the promise returned from the axios call. 
     Pass a callback function to the .then. 
@@ -239,31 +244,45 @@ document.getElementById('query-button').addEventListener('click', queryAttach)
 
 const createFood = () =>{
     let foodInput = document.querySelector("inputFood")
-    let form = document.createElement("ul");
-    let formTitle = document.createElement("span");
-    formTitle.textContent = foodInput.value;
-    form.appendChild(formTitle);
-    formTitle.addEventListener("click", formTitle)
-
-   const body = {
+    // let form = document.createElement("ul");
+    // let formTitle = document.createElement("span");
+    // formTitle.textContent = foodInput.value;
+    // form.appendChild(formTitle);
+    // let foodButton = document.querySelector("foodBtn")
+    // foodButton.addEventListener("click", formTitle)
+    
+    const body = {
         newFood : foodInput
     }
 
-    const postToServer = () => {
-        axios.post('http://localhost:3000/food',body) 
-        .then(response => {
-                console.log('Response Data',response.data)
-        })
+    axios.post('http://localhost:3000/food',body)
+    .then(response => {
+        console.log('Response Data',response.data)
+    })
         .catch(error => {
             console.log('Error', error)
         })
-        }
-        console.log(document.querySelector("body"))
 
 }
+
 console.log(document.querySelector("form"));
+
+
+        
+// console.log(document.querySelector("body"))
+
+
 // document.getElementById('foodBtn').addEventListener('click', createFood)
 //pass createFood into html line 27 form
 
 
-
+// const postToServer = () => {
+//     axios.post('http://localhost:3000/food',body) 
+//     .then(response => {
+//             console.log('Response Data',response.data)
+//     })
+//     .catch(error => {
+//         console.log('Error', error)
+//     })
+//     }
+//     console.log(document.querySelector("body"))
