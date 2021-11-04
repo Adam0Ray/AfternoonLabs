@@ -13,6 +13,7 @@ getResidentData = () => {
             axios
             .get(url)
             .then(res => renderData(res.data))        //calling renderData function
+            // debugger
         })
     })
 }

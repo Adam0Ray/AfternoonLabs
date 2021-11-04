@@ -1,0 +1,13 @@
+Shift Letters on keyboard two letters over
+example q=e, w=r, p=w
+
+
+“I love cryptography!"
+"I sqnt byiwuqjydwki!"
+
+Display the result. Using your cipher again, decipher the ciphered phrase. Do you get “I love cryptography!”?
+
+I sqnt byiwuqjydwki!
+I fezu miproeligrap!
+
+No i get a new cipher
