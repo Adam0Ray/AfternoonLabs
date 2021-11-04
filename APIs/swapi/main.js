@@ -2,17 +2,17 @@
 
 let resBtn = document.getElementById('get-res');
 
-getResidentData = () =>{
+getResidentData = () => {
     axios
-    .get(url)
+    .get("https://swapi.dev/api/planets/?search=alderaan")
     .then(res => {
-        debugger
+        //debugger
         //debugger to find res.data.results[0].residents
         let residents = res.data.results[0].residents;  //array of URLs
         return residents.map(url => {                 //passing in array of URLs from previous line
             axios
             .get(url)
-            .then(res=> renderData(res.data))        //calling renderData function
+            .then(res => renderData(res.data))        //calling renderData function
         })
     })
 }
@@ -24,6 +24,6 @@ renderData = data => {
     document.getElementById('target').appendChild(h2);
 }
 
-const url = "https://swapi.dev/api/planets/?search=alderaan"
+var url = "https://swapi.dev/api/planets/?search=alderaan"
 
-resBtn.addEventListener("click",resBtn)
+resBtn.addEventListener("click",getResidentData);
