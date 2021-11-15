@@ -1,5 +1,5 @@
 #2
-# data = open('CupcakeInvoices.csv')
+data = open('CupcakeInvoices.csv')
 #3
 # for row in data:
 #     print(row)
@@ -13,27 +13,28 @@
 #     type = row.split(',')
 #     total = int(type[3]) * float(type[4])
 #     print(total)
-#6
-# total = 0
-# for row in data:
-#     type = row.split(',')
-#     total = total + (int(type[3]) * float(type[4]))
-#     print(total)
+# #6
+total = 0
+for row in data:
+    type = row.split(',')
+    total = total + (int(type[3]) * float(type[4]))
+    print(total)
+
 # #7
-# data.close()
+data.close()
 
 
 
 # #######################################################################################
 #PART 3
-data = open('CupcakeInvoices.csv')
+# data = open('CupcakeInvoices.csv')
 # total = 0
 # for row in data:
 #     type = row.split(',')
 #     if type[2] == 'Chocolate':
 #         total = total + (int(type[3]) * float(type[4]))
 # print(total)
-#267.1
+# 267.1
 
 # total = 0
 # for row in data:
@@ -43,17 +44,17 @@ data = open('CupcakeInvoices.csv')
 # print(total)
 #388.6
 
-total = 0
-for row in data:
-    type = row.split(',')
-    if type[2] == 'Strawberry':
-        total = total + (int(type[3]) * float(type[4]))
-print(total)
+# total = 0
+# for row in data:
+#     type = row.split(',')
+#     if type[2] == 'Strawberry':
+#         total = total + (int(type[3]) * float(type[4]))
+# print(total)
 #159.69000000000003
 
 
-data.close()
-
+# data.close()
+###########################################################################################
 # import matplotlib.pyplot as plt 
     
 # # x axis values 

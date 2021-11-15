@@ -1,0 +1,23 @@
+Overview:
+    Test the functionality of the app
+
+Links:
+    http://localhost:3000/#/
+
+Test Criteria:
+    Test Enter Feature
+    Test Modify Feature
+    Test Cancel Feature
+    
+Entry Criteria:
+    Test Criteria provided
+    Running Version provided for testing
+    Computer for testing
+Exit Criteria:
+    All high priority tests have passed
+    The allotted time is up
+Other Details:
+    Environment
+    Should run on any modern browser(post I.E. 8 and similar), and be fully 
+        functional, and reasonably styled.
+    Chrome is the recommended browser.
