@@ -1,14 +1,14 @@
 Overview:
-    Test the functionality of the app
+    Test the functionality of the  Enter feature in app
 
 Links:
     http://localhost:3000/#/
 
 Test Criteria:
     Test Enter Feature
-    Test Modify Feature
-    Test Cancel Feature
-    
+    Input values in each field for test
+    click submit button
+        
 Entry Criteria:
     Test Criteria provided
     Running Version provided for testing
@@ -21,3 +21,101 @@ Other Details:
     Should run on any modern browser(post I.E. 8 and similar), and be fully 
         functional, and reasonably styled.
     Chrome is the recommended browser.
+---------------------------------------------------------------------------
+Overview:
+    Test the functionality of the  modify feature in app
+
+Links:
+    http://localhost:3000/#/
+
+Test Criteria:
+    Test Modify Feature
+    Input new values in each field for test
+    click submit button
+        
+Entry Criteria:
+    Test Criteria provided
+    Running Version provided for testing
+    Computer for testing
+Exit Criteria:
+    All high priority tests have passed
+    The allotted time is up
+Other Details:
+    Environment
+    Should run on any modern browser(post I.E. 8 and similar), and be fully 
+        functional, and reasonably styled.
+    Chrome is the recommended browser.  
+
+---------------------------------------------------------------------------
+Overview:
+    Test the functionality of the  Enter feature Dry form in app
+
+Links:
+    http://localhost:3000/#/
+
+Test Criteria:
+    Test Enter Feature dry form
+    Input some values in fields but not all fields for test
+    click submit button
+        
+Entry Criteria:
+    Test Criteria provided
+    Running Version provided for testing
+    Computer for testing
+Exit Criteria:
+    All high priority tests have passed
+    The allotted time is up
+Other Details:
+    Environment
+    Should run on any modern browser(post I.E. 8 and similar), and be fully 
+        functional, and reasonably styled.
+    Chrome is the recommended browser.   
+    -----------------------------------------------------------------------
+Overview:
+    Test the functionality of the  Modify feature Dry form in app
+
+Links:
+    http://localhost:3000/#/
+
+Test Criteria:
+    Test Modify Feature dry form
+    Input some values in modify fields but not all fields for test
+    click submit button
+        
+Entry Criteria:
+    Test Criteria provided
+    Running Version provided for testing
+    Computer for testing
+Exit Criteria:
+    All high priority tests have passed
+    The allotted time is up
+Other Details:
+    Environment
+    Should run on any modern browser(post I.E. 8 and similar), and be fully 
+        functional, and reasonably styled.
+    Chrome is the recommended browser.     
+
+    -----------------------------------------------------------------------
+Overview:
+    Test the overall functionality of the site
+
+Links:
+    http://localhost:3000/#/
+
+Test Criteria:
+    Click through site to make sure pages work
+    Change view size of window to make sure scaling works
+    Are links functioning properly
+        
+Entry Criteria:
+    Test Criteria provided
+    Running Version provided for testing
+    Computer for testing
+Exit Criteria:
+    All high priority tests have passed
+    The allotted time is up
+Other Details:
+    Environment
+    Should run on any modern browser(post I.E. 8 and similar), and be fully 
+        functional, and reasonably styled.
+    Chrome is the recommended browser.       
